@@ -79,3 +79,24 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
 - [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
 - [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+
+## Tips
+
+npm run build
+Build all apps and packages
+
+npm run dev
+Develop all apps and packages
+
+npm run lint
+Lint all apps and packages
+
+Turborepo will cache locally by default. For an additional
+speed boost, enable Remote Caching with Vercel by
+entering the following command:
+
+npx turbo login
+
+We suggest that you begin by typing:
+
+npx turbo login
