@@ -1,10 +1,15 @@
-// This configuration only applies to the package manager root.
-/** @type {import("eslint").Linter.Config} */
 module.exports = {
-  ignorePatterns: ["apps/**", "packages/**"],
-  extends: ["@repo/eslint-config/library.js"],
-  parser: "@typescript-eslint/parser",
+  root: true,
+  // This tells ESLint to load the config from the package `eslint-config-custom`
+  extends: ["custom"],
+  settings: {
+    next: {
+      rootDir: ["apps/*/"],
+    },
+  },
   parserOptions: {
-    project: true,
+    babelOptions: {
+      presets: [require.resolve('next/babel')],
+    },
   },
 };

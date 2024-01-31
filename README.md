@@ -1,102 +1,80 @@
-# Turborepo starter
+<p align="center">
+    <a href="https://codeforstartup.com/">
+        <img style="width: 180px;" src="./apps/web/public/assets/logo.png">
+        <h1 align="center">TOPLIST</h1>
+    </a>
+</p>
 
-This is an official starter Turborepo.
+# About TOPLIST
 
-## Using this example
+# Installation
 
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
-
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
+Install
 
 ```
-cd my-turborepo
-pnpm build
+turbo install
 ```
 
-### Develop
+In the `apps/web` folder, copy the env.example to env.local and enter the environment values
 
-To develop all apps and packages, run the following command:
+In the `packages/database`, copy the env.example to .env and enter the DATABASE_URL
 
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+Migration
 
 ```
-cd my-turborepo
-npx turbo login
+db:migrate
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Start
 
 ```
-npx turbo link
+turbo dev
 ```
 
-## Useful Links
+# Libraries
 
-Learn more about the power of Turborepo:
+🤖 ReactJS  
+🎯 TypeScript  
+💫 NextJS 14 - App router and server actions  
+🤗 Prisma  
+🎰 React Form Hook  
+🎭 Postgres  
+🖋 Zod validation  
+🎯 TailwindCSS  
+🚀 Turborepo  
+💒 Tiptap  
+🍾 react-textarea-autosize  
+👽 Prettier
+💥 Husky  
+🔥 shadcn  
+💌 next-themes  
+🐠 lucide-react icon  
+🐧 next-auth  
+🐴 dayjs  
+🐢 react-toastify
 
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+# Functions
 
-## Tips
+- [x] Register by email or github
+- [x] Login by email, github or magic link
+- [x] User logout
+- [ ] Verify email
+- [ ] Forgot password
+- [x] CRUD post
+- [x] List post: Search & filter by top or hot week, month, year, infinity
+- [x] Like post
+- [x] Comment on post
+- [ ] Share post
+- [x] Manage tag
+- [ ] Follow user
+- [ ] Multiple theme & dark mode or light mode
+- [ ] Multiple language
+- [ ] Follow tag
+- [ ] Manage user profile
+- [ ] Multiple type: post/question
 
-npm run build
-Build all apps and packages
+# DEV NOTES
 
-npm run dev
-Develop all apps and packages
-
-npm run lint
-Lint all apps and packages
-
-Turborepo will cache locally by default. For an additional
-speed boost, enable Remote Caching with Vercel by
-entering the following command:
-
-npx turbo login
-
-We suggest that you begin by typing:
-
-npx turbo login
+[[1][DEV NOTE] Initial turbo project and add tailwindcss library](https://dev.to/codeforstartup/dev-note-initial-turbo-project-and-add-tailwindcss-library-4iae)  
+[[2][DEV NOTE] Integrate prisma and postgres database](https://dev.to/codeforstartup/2dev-note-add-prisma-and-postgres-database-2m84)  
+[[3][DEV NOTE] Create a form with tiptap and react-textarea-autosize](https://dev.to/codeforstartup/3dev-note-create-a-form-with-tiptap-and-react-textarea-autosize-1cgn)

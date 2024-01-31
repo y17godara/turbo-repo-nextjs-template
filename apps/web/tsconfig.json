@@ -1,18 +1,29 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
+    "jsx": "preserve",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*",
+        "@/*",
+        "assets/*"
+      ]
+    }
   },
   "include": [
     "next-env.d.ts",
-    "next.config.js",
+    "types/next-auth.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
